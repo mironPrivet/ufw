@@ -22,7 +22,6 @@ ufw allow 80
 
 # Запрос порта у пользователя
 read -p "Введите порт, который нужно открыть для указанных IP: " PORT
-read -p "Введите порт Remnanode: " PORTNODE
 
 # Список IP
 IPS=(
@@ -44,7 +43,7 @@ for IP in "${IPS[@]}"
 do
     ufw allow from $IP to any port $PORT
 done
-ufw allow from 91.132.160.245 to any port $PORTNODE
+
 
 # Включение ufw
 ufw enable
