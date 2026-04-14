@@ -19,6 +19,7 @@ ufw default deny incoming
 # Открываем стандартные порты
 ufw allow 443
 ufw allow 80
+ufw allow 9998
 
 # Запрос порта у пользователя
 read -p "Введите порт, который нужно открыть для указанных IP: " PORT
